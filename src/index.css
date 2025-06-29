@@ -1,0 +1,195 @@
+/* Base styles */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 17, 24, 39;
+  --background-end-rgb: 31, 41, 55;
+  --color-primary: 168, 85, 247;
+  --color-secondary: 232, 121, 249;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-padding-top: 6rem;
+}
+
+body {
+  min-height: 100vh;
+  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+}
+
+/* Custom components */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  color: white;
+  transition: all 0.3s;
+  background: linear-gradient(to right, #a855f7, #e879f9);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 10px 15px -3px rgba(168, 85, 247, 0.3);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #a855f7, #e879f9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Custom animations */
+@keyframes gradient-xy {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Custom utilities */
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+
+html {
+  scroll-padding-top: 6rem;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      rgb(var(--background-start-rgb)),
+      rgb(var(--background-end-rgb))
+    );
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(31, 41, 55);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #a855f7, #e879f9);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #9333ea, #d946ef);
+}
+
+/* Gradient Text */
+.text-gradient {
+  background: linear-gradient(to right, #a855f7, #e879f9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Glow Effect */
+.glow {
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.5), 0 0 20px rgba(168, 85, 247, 0.3);
+}
+
+/* Custom Button */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  border-radius: 9999px;
+  background: linear-gradient(to right, #a855f7, #e879f9);
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  color: white;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 10px 15px -3px rgba(168, 85, 247, 0.3);
+}
+
+.btn-primary::before {
+  @apply absolute inset-0 bg-gradient-to-r from-secondary to-primary opacity-0 transition-opacity duration-300 content-[''];
+}
+
+.btn-primary:hover::before {
+  @apply opacity-100;
+}
+
+.btn-primary span {
+  @apply relative z-10;
+}
+
+/* Section Title */
+.section-title {
+  @apply mb-12 text-center text-4xl font-bold md:text-5xl;
+}
+
+/* Container */
+.container {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+/* Animations */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Avatar Glow */
+.avatar-glow {
+  box-shadow: 0 0 20px 5px rgba(168, 85, 247, 0.3), 0 0 40px 10px rgba(168, 85, 247, 0.2);
+  animation: pulse 4s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 20px 5px rgba(168, 85, 247, 0.3), 0 0 40px 10px rgba(168, 85, 247, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px 10px rgba(168, 85, 247, 0.4), 0 0 50px 20px rgba(168, 85, 247, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 20px 5px rgba(168, 85, 247, 0.3), 0 0 40px 10px rgba(168, 85, 247, 0.2);
+  }
+}
