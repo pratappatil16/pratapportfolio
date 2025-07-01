@@ -62,7 +62,7 @@ const About = () => {
             <div className="space-y-4 text-gray-300">
               <p>
                 I'm a passionate Full Stack Developer with a strong foundation in both frontend and backend technologies. 
-                With over 5 years of experience in the industry, I've had the privilege of working with amazing teams 
+                With over 1 years of experience in the industry, I've had the privilege of working with amazing teams 
                 to build scalable and user-friendly applications.
               </p>
               <p>
