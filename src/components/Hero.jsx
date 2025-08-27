@@ -5,14 +5,13 @@ import avatar from '../assets/IMG_2673.svg';
 
 const Hero = () => {
   const socialLinks = [
-    { icon: <FaGithub />, href: 'https://github.com/yourusername', label: 'GitHub' },
-    { icon: <FaLinkedin />, href: 'https://linkedin.com/in/yourusername', label: 'LinkedIn' },
-    { icon: <FaTwitter />, href: 'https://twitter.com/yourusername', label: 'Twitter' },
+    { icon: <FaGithub />, href: 'https://github.com/pratappatil16', label: 'GitHub' },
+    { icon: <FaLinkedin />, href: 'https://linkedin.com/in/pratappatil2003', label: 'LinkedIn' },
     { icon: <SiLeetcode />, href: 'https://leetcode.com/ppratappatil16', label: 'LeetCode' },
   ];
 
   return (
-    <section 
+    <section
       id="home"
       className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
     >
@@ -26,7 +25,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between">
           {/* Left Side - Avatar */}
-          <motion.div 
+          <motion.div
             className="relative mb-12 lg:mb-0 lg:mr-12"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -41,9 +40,9 @@ const Hero = () => {
               </div>
               <div className="absolute inset-0 rounded-full avatar-glow"></div>
             </div>
-            
+
             {/* Decorative Elements */}
-            <motion.div 
+            <motion.div
               className="absolute -top-4 -right-4 w-16 h-16 rounded-full bg-gradient-to-r from-[#a855f7] to-[#e879f9] flex items-center justify-center text-white text-2xl"
               animate={{ rotate: 360 }}
               transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
@@ -51,8 +50,8 @@ const Hero = () => {
               <span className="absolute w-12 h-12 rounded-full bg-gray-900"></span>
               <span className="relative z-10">🚀</span>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="absolute -bottom-4 -left-4 w-12 h-12 rounded-full bg-gradient-to-r from-[#e879f9] to-[#a855f7] flex items-center justify-center text-white text-xl"
               animate={{ rotate: -360 }}
               transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
@@ -63,13 +62,13 @@ const Hero = () => {
           </motion.div>
 
           {/* Right Side - Content */}
-          <motion.div 
+          <motion.div
             className="max-w-2xl text-center lg:text-left"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
-            <motion.h1 
+            <motion.h1
               className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -77,8 +76,8 @@ const Hero = () => {
             >
               Hi, I'm <span className="text-gradient">Pratap Patil</span>
             </motion.h1>
-            
-            <motion.h2 
+
+            <motion.h2
               className="text-2xl sm:text-3xl text-gray-300 mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -86,8 +85,8 @@ const Hero = () => {
             >
               <span className="text-gradient">Frontend Developer</span>
             </motion.h2>
-            
-            <motion.p 
+
+            <motion.p
               className="text-lg text-gray-400 mb-8 max-w-lg mx-auto lg:mx-0"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -95,29 +94,31 @@ const Hero = () => {
             >
               I build exceptional digital experiences. Currently focused on building The Jupiter App for Jupiter Money.
             </motion.p>
-            
-            <motion.div 
+
+            <motion.div
               className="flex flex-wrap justify-center lg:justify-start gap-4 mb-12"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1 }}
             >
-              <a 
-                href="#contact" 
+              <a
+                href="#contact"
                 className="btn-primary flex items-center px-6 py-3 rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:shadow-primary/30"
               >
                 <span>Get In Touch</span>
               </a>
-              <a 
-                href="#about" 
+              <a
+                href="/Pratapresume.pdf"
+                download="Pratap_Patil_Resume.pdf"
                 className="flex items-center px-6 py-3 rounded-full border border-gray-700 text-gray-300 hover:bg-gray-800/50 hover:text-white transition-all duration-300"
               >
-                <span>Learn More</span>
+                <span>Download Resume</span>
                 <FaArrowDown className="ml-2" />
               </a>
             </motion.div>
-            
-            <motion.div 
+
+
+            <motion.div
               className="flex justify-center lg:justify-start space-x-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -143,8 +144,8 @@ const Hero = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <motion.div 
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+        <motion.div
+          className="flex flex-col items-center justify-center mt-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1.5 }}
@@ -155,7 +156,7 @@ const Hero = () => {
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
             className="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center p-1"
           >
-            <motion.div 
+            <motion.div
               className="w-1 h-2 bg-gradient-to-b from-[#a855f7] to-[#e879f9] rounded-full"
               animate={{ y: [0, 8] }}
               transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}

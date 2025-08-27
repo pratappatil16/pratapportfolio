@@ -1,12 +1,14 @@
 import { motion } from 'framer-motion';
-import { FaCode, FaServer, FaMobile, FaDatabase } from 'react-icons/fa';
+import { FaCode, FaServer, FaMobile, FaDatabase, FaLaptopCode, FaTools } from 'react-icons/fa';
 
 const About = () => {
   const skills = [
-    { name: 'Frontend', icon: <FaCode />, items: ['HTML', 'CSS', 'React', 'Tailwind CSS', 'JavaScript', 'TypeScript'] },
-    { name: 'Backend', icon: <FaServer />, items: ['Node.js', 'Express'] },
-    { name: 'Mobile', icon: <FaMobile />, items: ['React Native'] },
+    {name:'Languages', icon:<FaLaptopCode/>, items:['C++', 'JavaScript', 'TypeScript']},
+    { name: 'Frontend', icon: <FaCode />, items: ['HTML', 'CSS', 'React','React Native', 'Tailwind CSS'] },
+    { name: 'Backend', icon: <FaServer />, items: ['Node.js', 'Express','Nuxt.js','GraphQL'] },
     { name: 'Database', icon: <FaDatabase />, items: ['MongoDB', 'PostgreSQL', 'MySQL'] },
+    { name: 'Tools', icon: <FaTools />, items: ['Amplitude','DataDog','Corologix','Retool','Grafana'] },
+
   ];
 
   const container = {
