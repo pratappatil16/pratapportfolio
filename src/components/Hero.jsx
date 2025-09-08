@@ -108,7 +108,7 @@ const Hero = () => {
                 <span>Get In Touch</span>
               </a>
               <a
-                href="/Pratapresume.pdf"
+                href="/PratapPatil.pdf"
                 download="Pratap_Patil_Resume.pdf"
                 className="flex items-center px-6 py-3 rounded-full border border-gray-700 text-gray-300 hover:bg-gray-800/50 hover:text-white transition-all duration-300"
               >
